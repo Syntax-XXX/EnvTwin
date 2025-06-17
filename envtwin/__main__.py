@@ -14,10 +14,14 @@ def main():
     snapshot = snapshot_system()
     if args.dockerfile:
         dockerfile = generate_dockerfile(snapshot)
-        print(dockerfile)
+        with open('Dockerfile', 'w') as f:
+            f.write(dockerfile)
+        print('Dockerfile written to Dockerfile')
     if args.setup_script:
         setup_script = generate_setup_script(snapshot)
-        print(setup_script)
+        with open('setup.sh', 'w') as f:
+            f.write(setup_script)
+        print('Setup script written to setup.sh')
     if args.export:
         export_snapshot(snapshot, args.export)
 

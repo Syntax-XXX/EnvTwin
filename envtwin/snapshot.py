@@ -33,7 +33,7 @@ def get_npm_packages():
 def get_installed_packages():
     pip = subprocess.getoutput('pip freeze')
     try:
-        apt = subprocess.getoutput('apt list --installed')
+        apt = subprocess.getoutput('apt-mark showmanual')
     except Exception:
         apt = ''
     return {
