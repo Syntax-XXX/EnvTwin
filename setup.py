@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="envtwin",
-    version="0.1.0",
+    version="1.1.0",
     description="Instant Environment Recreator: snapshot and share your dev environment.",
     author="Syntax-XXX",
     packages=find_packages(),
