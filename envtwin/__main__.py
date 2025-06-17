@@ -15,8 +15,7 @@ def main():
         dockerfile = generate_dockerfile(snapshot)
         print(dockerfile)
     if args.setup_script:
-        # Placeholder for setup script generation
-        print("Setup script generation not yet implemented.")
+        print("Setup script generation not yet implemented. will come in the Next Update")
     if args.export:
         export_snapshot(snapshot, args.export)
 
