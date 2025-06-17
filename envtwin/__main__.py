@@ -5,7 +5,7 @@ from .share import export_snapshot
 
 def main():
     parser = argparse.ArgumentParser(description="EnvTwin: Instant Environment Recreator")
-    parser.add_argument('--dockerfile', action='store_true', help='Generate Dockerfile from current environment')
+    parser.add_argument('--dockerfile', action='store_true', help='Generate Dockerfile from current environment or if there is no enviroment it will list all packages of the linux OS ur using (Windows not tested yet)')
     parser.add_argument('--setup-script', action='store_true', help='Generate setup script from current environment')
     parser.add_argument('--export', type=str, help='Export snapshot to file')
     args = parser.parse_args()
