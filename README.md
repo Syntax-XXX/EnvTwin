@@ -1,4 +1,6 @@
 # EnvTwin
+# Still In Aktive Development
+# Its a Beta Version
 
 EnvTwin is an instant environment recreator. It snapshots your system setup (OS, packages, editors, databases, ports, etc.), converts it into a Dockerfile or setup script, and lets you share it with one click—like a dev VM twin for onboarding.
 
