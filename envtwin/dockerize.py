@@ -3,10 +3,8 @@ def generate_dockerfile(snapshot):
     packages = snapshot['packages']
     editors = snapshot['editors']
     dbs = snapshot['databases']
-    # Start with a base image
     base = 'ubuntu:latest' if os_info['system'].lower() == 'linux' else 'debian:latest'
     dockerfile = [f'FROM {base}', 'RUN apt-get update && apt-get install -y \\']
-    # Add editors and dbs
     apt_packages = editors + dbs
     if packages['apt']:
         for line in packages['apt']:
@@ -16,7 +14,6 @@ def generate_dockerfile(snapshot):
                     apt_packages.append(pkg)
     dockerfile.append('    ' + ' \\\n    '.join(apt_packages))
     dockerfile.append('RUN apt-get clean')
-    # Python and pip packages
     dockerfile.append('RUN apt-get install -y python3-pip')
     if packages['pip']:
         dockerfile.append('RUN pip3 install ' + ' '.join([pkg.split('==')[0] for pkg in packages['pip']]))
