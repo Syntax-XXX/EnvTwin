@@ -2,3 +2,4 @@ venv
 build
 envtwin.egg-info
 dist
+__pycache__
