@@ -13,11 +13,9 @@ EnvTwin is an instant environment re-creator. It snapshots your system setup (OS
 ## Usage
 
 Install locally for development:
-
+https://pypi.org/project/envtwin/
 ```sh
 pip install envtwin
-
-https://pypi.org/manage/project/envtwin/releases/
 ```
 
 Run the CLI:
