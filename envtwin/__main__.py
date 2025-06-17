@@ -1,6 +1,7 @@
 import argparse
 from .snapshot import snapshot_system
 from .dockerize import generate_dockerfile
+from .setupscript import generate_setup_script
 from .share import export_snapshot
 
 def main():
@@ -15,7 +16,8 @@ def main():
         dockerfile = generate_dockerfile(snapshot)
         print(dockerfile)
     if args.setup_script:
-        print("Setup script generation not yet implemented. will come in the Next Update")
+        setup_script = generate_setup_script(snapshot)
+        print(setup_script)
     if args.export:
         export_snapshot(snapshot, args.export)
 
